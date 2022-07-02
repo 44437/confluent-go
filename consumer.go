@@ -13,7 +13,7 @@ func init() {
 	viper.SetConfigFile(".env")
 	err := viper.ReadInConfig()
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 	fmt.Println(viper.AllKeys())
 }
